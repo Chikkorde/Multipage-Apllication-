@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi form application </title>
+</head>
+
+
+
+<body>
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip01" class="form-label">Name</label>
+          <input type="text" class="form-control" id="validationTooltip01" value="Mark" required> 
+          <div class="valid-tooltip">
+            Looks good! <br><br>
+          </div>
+        </div>
+
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip01" class="form-label">Email</label>
+        <input type='text' id='txtEmail'/>
+    <input type='submit' name='submit' onclick='checkEmail();'/> <br><br>
+
+   <script>
+    function checkEmail() {
+        var email = document.getElementById('txtEmail');
+        var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!filter.test(email.value)) {
+            alert('Please provide a valid email address');
+            email.focus;
+            return false;
+        }
+    }
+   </script>
+
+   
+
+
+       
+
+       <!-- Create a new password -->  
+   <td> Create Password* </td>  
+  <input type = "password" id = "pswd1" value = "">   
+<span id = "message1" style="color:red"> </span> <br><br>  
+  
+<!--Enter confirm password -->  
+<td> Confirm Password* </td>  
+<input type = "password" id = "pswd2" value = "">   
+<span id = "message2" style="color:red"> </span> <br><br>  
+  
+<!-- Click to verify valid password -->  
+<input type = "submit" value = "Submit">  
+  
+<!-- Click to reset fields -->  
+<button type = "reset" value = "Reset" >Reset</button> 
+
+
+<script>
+  function validateForm() {  
+     
+    var pw1 = document.getElementById("pswd1").value;  
+    var pw2 = document.getElementById("pswd2").value;  
+
+if(pw1 == "") {  
+      document.getElementById("message1").innerHTML = "**Fill the password please!";  
+      return false;  
+    }  
+    
+   
+    if(pw2 == "") {  
+      document.getElementById("message2").innerHTML = "**Enter the password please!";  
+      return false;  
+    }   
+     
+  
+    if(pw1.length < 8) {  
+      document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";  
+      return false;  
+    }  
+  
+     
+    if(pw1.length > 15) {  
+      document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";  
+      return false;  
+    }  
+    
+    if(pw1 != pw2) {  
+      document.getElementById("message2").innerHTML = "**Passwords are not same";  
+      return false;  
+    } else {  
+      alert ("Your password created successfully");  
+      document.write("JavaScript form has been submitted successfully");  
+    }  
+ }  
+      </script>
+
+
+
+
+
+
+
+
+    <script>
+     var correctFormat = false;
+    for (var i = 0; i = i < name.length; i++) {
+    if (name[i] === " ") {
+       correctFormat = true;
+      }
+   }
+    if (correctFormat === false) {
+    alert("You entered an invalid name");
+    return false;
+    } 
+    else {
+     return true;
+    }
+
+
+ 
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      </script>
+
+
+
+</body>
+</html>
